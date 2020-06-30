@@ -35,7 +35,8 @@ module HtmlToPlainText
       if $3.empty?
         ''
       else
-        $3.strip + ' ( ' + $2.strip + ' )'
+        #$3.strip + ' ( ' + $2.strip + ' )'
+        $3.strip + ' ' + URI.decode($2.strip) + ' '
       end
     end
 
